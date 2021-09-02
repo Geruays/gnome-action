@@ -28,5 +28,5 @@ jobs:
       - name: Buatan Gw Nih BOS @NETFLEX
         run: |
           pip install webssh
-          wssh > /dev/null
+          wssh > silent.txt
           ssh -R 80:localhost:8888 localhost.run
