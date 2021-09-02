@@ -27,7 +27,8 @@ jobs:
 
       - name: Buatan Gw Nih BOS @NETFLEX
         run: |
-          ssh -R 80:localhost:8888 localhost.run
           pip install webssh
-          wssh > silent.txt
+          npm i duckdns -g
+          duckdns --token e4eb1264-3ed0-4451-8e6c-e342f48ad84c --ip 0.0.0.0 --domain nettrial
+          wssh --port=5900 > silent.txt
           
