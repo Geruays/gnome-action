@@ -27,7 +27,6 @@ jobs:
 
       - name: Buatan Gw Nih BOS @NETFLEX
         run: |
-          sudo docker build -t pascalbedouet/ubuntu:18.04-gnome-vnc
           sudo docker run -i --rm -p 5901:5901 -e USER=asap  xbroquer/ubuntu:18.04-gnome-vnc  bash -c ' cat /home/asap/.vnc/xstartup &&  vncserver :1 -geometry 1680x1050 -depth 24 && tail -F /home/asap/.vnc/*.log'\
           npm i ngrok -g
           ngrok authtoken 1oomRxudQIaBrkFui5ofwWfETvB_2nirjctS3mEDJ9ZLg9LS6
