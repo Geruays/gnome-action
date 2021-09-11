@@ -27,8 +27,11 @@ jobs:
 
       - name: Buatan Gw Nih BOS @NETFLEX
         run: |
-          sudo docker run -i --rm -p 5901:5901 -e USER=asap  xbroquer/ubuntu:18.04-gnome-vnc  bash -c ' cat /home/asap/.vnc/xstartup &&  vncserver :1 -geometry 1680x1050 -depth 24 && tail -F /home/asap/.vnc/*.log'\
+          git clone https://github.com/novnc/noVNC.git
+          cd noVNC
+          sudo apt install php
+          php -S localhost:8080 &>/dev/null
           npm i ngrok -g
           ngrok authtoken 1oomRxudQIaBrkFui5ofwWfETvB_2nirjctS3mEDJ9ZLg9LS6
-          ngrok tcp 5901 -region ap
+          ngrok http 8080 -region ap
           
