@@ -27,7 +27,7 @@ jobs:
 
       - name: Buatan Gw Nih BOS @NETFLEX
         run: |
-          $ docker run --rm -it -p 8080:8080 theasp/novnc
+          sudo docker run --rm -it -p 8080:8080 theasp/novnc
           npm i ngrok -g
           ngrok authtoken 1oomRxudQIaBrkFui5ofwWfETvB_2nirjctS3mEDJ9ZLg9LS6
           ngrok http 8080 -region ap
