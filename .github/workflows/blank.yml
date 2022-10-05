@@ -31,6 +31,6 @@ jobs:
           npm i -g ngrok
           chmod +x wow.sh
           ./wow.sh
-          ngrok authtoken 1oomRxudQIaBrkFui5ofwWfETvB_2nirjctS3mEDJ9ZLg9LS6
+          ngrok authtoken 2EztgYAH1Dq4mXlbHPb0zaCuqix_4JP58h8TeEfBWn547751u
           ngrok tcp 5901 -region ap
           
